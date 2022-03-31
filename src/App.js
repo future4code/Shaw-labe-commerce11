@@ -1,5 +1,6 @@
 import React from "react"; 
 import styled from 'styled-components'
+import Filtro from "./Filtro";
 
 const Main = styled.div`
   display: grid;
@@ -22,7 +23,7 @@ const Caixa = styled.div`
   padding: 4%;
 `
 
-const Filtro = styled.h3`
+const Titulo = styled.h3`
   margin-top: 5%;
   margin-bottom: 5%;
 `
@@ -60,46 +61,13 @@ export default class App extends React.Component {
     inputBuscaPorNome: 'Produto'
   }
 
-  onChangeInputValorMinimo = (event) => {
-    this.setState({inputValorMinimo: event.target.value})
-  }
-  onChangeInputValorMaximo = (event) => {
-    this.setState({inputValorMinimo: event.target.value})
-  }
-  onChangeInputBuscaPorNome = (event) => {
-    this.setState({inputBuscaPorNome: event.target.value})
-  }
-
   render() {
     return (
       <Principal>
         <Main>
           <Caixa>
-            <Filtro>Filtro</Filtro>
-            <lable>
-              Valor mínimo:<br/>
-              <input
-                value={this.state.inputValorMinimo}
-                type='number'
-                onChange={this.onChangeInputValorMinimo}
-              />
-            </lable><br/>
-            <lable>
-              Valor máximo:<br/>
-              <input
-                value={this.state.inputValorMaximo}
-                type='number'
-                onChange={this.onChangeInputValorMaximo}
-              />
-            </lable><br/>
-            <lable>
-              Busca por nome:<br/>
-              <input
-                value={this.state.inputBuscaPorNome}
-                type='text'
-                onChange={this.onChangeInputBuscaPorNome}
-              />
-            </lable>
+            <Titulo>Filtro</Titulo>
+            <Filtro/>
           </Caixa>
           <Ordenador>
             <Header>
