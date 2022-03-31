@@ -17,7 +17,7 @@ const Principal = styled.div`
 
 const Caixa = styled.div`
   border: 1px solid black;
-  height: 400px;
+  height: 500px;
   margin: 4%;
   padding: 4%;
 `
@@ -40,16 +40,14 @@ const Ordenador = styled.div`
 `
 
 const Produtos = styled.div`
-  margin: 1%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 350px;
+  height: 450px;
   column-gap: 1%;
 `
 
 const Caixinha = styled.div`
-  border: 1px solid black;  
-
+  border: 1px solid black;
 `
 
 export default class App extends React.Component {
@@ -79,7 +77,7 @@ export default class App extends React.Component {
           <Caixa>
             <Filtro>Filtro</Filtro>
             <lable>
-              Valor mínimo:
+              Valor mínimo:<br/>
               <input
                 value={this.state.inputValorMinimo}
                 type='number'
@@ -87,7 +85,7 @@ export default class App extends React.Component {
               />
             </lable><br/>
             <lable>
-              Valor máximo:
+              Valor máximo:<br/>
               <input
                 value={this.state.inputValorMaximo}
                 type='number'
@@ -95,7 +93,7 @@ export default class App extends React.Component {
               />
             </lable><br/>
             <lable>
-              Busca por nome:
+              Busca por nome:<br/>
               <input
                 value={this.state.inputBuscaPorNome}
                 type='text'
@@ -122,7 +120,7 @@ export default class App extends React.Component {
             </Header>
             <Produtos>
               <Caixinha>
-
+                <img src=""/>
               </Caixinha>
               <Caixinha>
 
